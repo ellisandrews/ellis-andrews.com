@@ -5,9 +5,9 @@ import Projects from './Projects'
 import './App.css'
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div id="app">
       <About/>
       <Projects/>
       <Blog/>

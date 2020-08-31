@@ -33,9 +33,11 @@ class Blog extends Component {
 
   render() {
     return (
-      <div id="blog">
+      <div id="blog" className="border">
         <h3>Blog</h3>
-        {this.renderBlogPosts()}
+        <div id="blog-container" className="container flex-container">
+          {this.renderBlogPosts()}
+        </div>
       </div>
     )
   }

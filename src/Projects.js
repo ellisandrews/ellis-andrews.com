@@ -25,9 +25,11 @@ class Projects extends Component {
 
   render() {
     return (
-      <div id="projects">
+      <div id="projects" className="border">
         <h3>Projects</h3>
-        {this.renderProjects()}
+        <div id="projects-container" className="flex-container">
+          {this.renderProjects()}
+        </div>
       </div>
     )
   }

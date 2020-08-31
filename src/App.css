@@ -1,0 +1,23 @@
+:root {
+    --color-1: #17252A;
+    --color-2: #2B7A78;
+    --color-3: #3AAFA9;
+    --color-4: #DEF2F1;
+    --color-5: #FEFFFF;
+}
+
+body {
+    margin: 0;
+}
+
+.border {
+    border: solid;
+}
+
+.flex-container {
+    /* Container for flexbox items */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
