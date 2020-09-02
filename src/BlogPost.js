@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-const BlogPost = ({ blogPost }) => {
+const BlogPost = ({ blogPost, index }) => {
   
   const { title, pubDate, link, thumbnail, categories } = blogPost
   
   return (
-    <div id={`blog-post-${title}`}>
-      <h6>{title}</h6>
-      <img src={thumbnail} alt={title} height="200" width="200"/>
+    <div id={`blog-post-${index}`} className="card border">
+      <h3>{title}</h3>
+      <img src={thumbnail} alt={title} className="card-img"/>
       <ul>
         <li>Published: {pubDate}</li>
         <li>Link: <a href={link}>{link}</a></li>

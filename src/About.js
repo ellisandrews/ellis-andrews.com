@@ -5,7 +5,7 @@ class About extends Component {
 
   render() {
     return (
-      <div id="about" className="border">
+      <section id="about" className="border">
         <h3>About</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -13,7 +13,7 @@ class About extends Component {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
         </p>
-      </div>
+      </section>
     )
   }
 

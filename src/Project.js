@@ -1,22 +1,54 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 
-const Project = ({ project }) => {
+class Project extends Component {
   
-  const { title, imageURL, githubURL, deploymentURL, videoURL, tags } = project
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      showDetails: false
+    }
+  }
+
+  handleMouseEnter = e => {
+    this.setState({ showDetails: false})
+  }
   
-  return (
-    <div id={`project-${title}`}>
-      <h6>{title}</h6>
-      <img src={imageURL} alt={title} height="200" width="200"/>
-      <ul>
-        <li>GitHub: {githubURL}</li>
-        <li>Deployment: {deploymentURL}</li>
-        <li>Video: {videoURL}</li>
-        <li>Tags: { tags.join(', ')}</li>
-      </ul>
-    </div>
-  )
+  handleMouseLeave = e => {
+    this.setState({ showDetails: true })
+  }
+
+  render() {
+
+    const { project: { title, imageURL, githubURL, deploymentURL, videoURL, tags }, index } = this.props
+
+    return (
+      <div id={`project-${index}`} className="card border" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+
+
+        {
+          this.state.showDetails ?
+          
+          <img src={imageURL} alt={title} className="card-img"/>
+
+          :
+
+          <div id={`project-${index}-details`}>
+            <h3>{title}</h3>
+            <ul>
+              <li>GitHub: {githubURL}</li>
+              <li>Deployment: {deploymentURL}</li>
+              <li>Video: {videoURL}</li>
+              <li>Tags: { tags.join(', ')}</li>
+            </ul>    
+          </div>
+        }
+
+        
+      </div>
+    )
+  }
 }
 
 

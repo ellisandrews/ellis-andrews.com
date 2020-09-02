@@ -28,17 +28,17 @@ class Blog extends Component {
   }
 
   renderBlogPosts = () => {
-    return this.state.blogPosts.map((blogPost, i) => <BlogPost blogPost={blogPost} key={i}/>)
+    return this.state.blogPosts.map((blogPost, i) => <BlogPost blogPost={blogPost} key={i} index={i}/>)
   }
 
   render() {
     return (
-      <div id="blog" className="border">
+      <section id="blog" className="border">
         <h3>Blog</h3>
         <div id="blog-container" className="container flex-container">
           {this.renderBlogPosts()}
         </div>
-      </div>
+      </section>
     )
   }
 

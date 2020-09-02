@@ -20,17 +20,17 @@ class Projects extends Component {
   }
 
   renderProjects = () => {
-    return this.state.projects.map((project, i) => <Project project={project} key={i}/>)
+    return this.state.projects.map((project, i) => <Project project={project} key={i} index={i}/>)
   }
 
   render() {
     return (
-      <div id="projects" className="border">
+      <section id="projects" className="border">
         <h3>Projects</h3>
         <div id="projects-container" className="flex-container">
           {this.renderProjects()}
         </div>
-      </div>
+      </section>
     )
   }
 
