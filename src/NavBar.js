@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-scroll'
 
 
 class NavBar extends Component {
@@ -7,9 +8,9 @@ class NavBar extends Component {
     return (
       <nav className="navbar">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><Link to="about" activeClass="active" spy={true} smooth={true} offset={-50} duration={500}>About</Link></li>
+          <li><Link to="projects" activeClass="active" spy={true} smooth={true} offset={-50} duration={500}>Projects</Link></li>
+          <li><Link to="blog" activeClass="active" spy={true} smooth={true} offset={-50} duration={500}>Blog</Link></li>
         </ul>
       </nav>
     )
