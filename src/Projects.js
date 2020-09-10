@@ -7,16 +7,11 @@ class Projects extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      projects: []
-    }
-  }
 
-  componentDidMount() {
-    // Fetch projects. Eventually this will be from a real backend
-    this.setState({
+    // Eventually, projects may be fetched from a real backend.
+    this.state = {
       projects: projects
-    })
+    }
   }
 
   renderProjects = () => {
