@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SectionHeader from './SectionHeader'
 
 
 class About extends Component {
@@ -6,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <section id="about" className="border">
-        <h3>About</h3>
+        <SectionHeader title="About" subtitle="Get to know me"/>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 

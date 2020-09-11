@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BlogPost from './BlogPost'
+import SectionHeader from './SectionHeader'
 
 
 class Blog extends Component {
@@ -34,7 +35,7 @@ class Blog extends Component {
   render() {
     return (
       <section id="blog" className="border">
-        <h3>Blog</h3>
+        <SectionHeader title="Blog" subtitle="Musings about code"/>
         <div id="blog-container" className="container flex-container">
           {this.renderBlogPosts()}
         </div>

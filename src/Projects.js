@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { projects } from './data'
 import Project from './Project'
+import SectionHeader from './SectionHeader'
 
 
 class Projects extends Component {
@@ -21,7 +22,7 @@ class Projects extends Component {
   render() {
     return (
       <section id="projects" className="border">
-        <h3>Projects</h3>
+        <SectionHeader title="Projects" subtitle="Some things I've built" />
         <div id="projects-container" className="flex-container">
           {this.renderProjects()}
         </div>
