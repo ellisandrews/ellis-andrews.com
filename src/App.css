@@ -21,42 +21,37 @@ body {
     overflow: hidden;
     top: 0;
     z-index: 1;
-    display: flex;
     width: 100%;
     height: var(--navbar-height);
     background: var(--color-1);
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: center;
+.navbar a {
+  float: left;
+  color: var(--color-3);
+  text-align: center;
+  padding: 17px 25px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.navbar ul li {
-    margin: 0 1rem;
-    padding: 1rem;
-}
-
-.navbar ul li > .active {
+.navbar a:hover {
     color: var(--color-5);
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-3);
-}
-
-.navbar ul li a:hover {
-    color: var(--color-5);
+    background: var(--color-3);
     cursor: pointer;
+}
+
+.navbar a.active {
+    color: var(--color-5);
+}
+
+.nav-right {
+  float: right;
 }
 
 section {
     width: 100%;
-    height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
 }
 
 .border {
@@ -82,8 +77,4 @@ section {
     height: auto;
     padding: 10px;
     margin: 10px;
-}
-
-#about {
-    margin-top: var(--navbar-height);
 }
